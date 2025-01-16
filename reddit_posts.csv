@@ -1,0 +1,1047 @@
+id,title,score,url,created_utc,num_comments,selftext,author
+1hxjv2o,Python in DevOps: My Favorite Tools,236,https://www.reddit.com/r/Python/comments/1hxjv2o/python_in_devops_my_favorite_tools/,1736448160.0,31,"Hey! 👋
+
+I rely on Python to do a lot of Ops / DevOps-type automation:  automate workflows, create dashboards, manage infrastructure, and build helpful tools. Over time, I’ve found some Python-based approaches that make these tasks much easier and more efficient. Here’s what I use:
+
+[https://www.pulumi.com/blog/python-for-devops/](https://www.pulumi.com/blog/python-for-devops/)
+
+* Custom dashboards with Flask and Prometheus Client
+* Automating workflows Schedule, then RQ, then finally Airflow
+* Network analysis with Scapy
+* Click / Typer / Rich for CLI (Starting with Click, but always moving past it at some point)
+
+And, of course, a bunch more.
+
+Then, for fun, I tried to use Python for everything in a single service  - using dagger for the container and pulumi for the Infra. ( I work for pulumi bc I'm a big fan of being able to use Python this way :) )
+
+Code: [https://github.com/adamgordonbell/service-status-monitor](https://github.com/adamgordonbell/service-status-monitor)
+
+What am I missing in my list?",agbell
+1hzg5fh,Train an LLM from Scratch,182,https://www.reddit.com/r/Python/comments/1hzg5fh/train_an_llm_from_scratch/,1736661225.0,16,"# What My Project Does
+
+I created an end-to-end LLM training project, from downloading the training dataset to generating text with the trained model. It currently supports the PILE dataset, a diverse data for LLM training. You can limit the dataset size, customize the default transformer architecture and training configuration, and more.
+
+This is what my **13 million parameter-trained LLM** output looks like, trained on a Colab T4 GPU:
+
+    In \*\*\*1978, The park was returned to the factory-plate that the public share to the lower of the electronic fence that follow from the Station's cities. The Canal of ancient Western nations were confined to the city spot. The villages were directly linked to cities in China that revolt that the US budget and in Odambinais is uncertain and fortune established in rural areas.
+
+# Target audience
+
+This project is for students and researchers who want to learn how tiny LLMs work by building one themselves. It's good for people who want to change how the model is built or train it on regular GPUs.
+
+# Comparison
+
+Instead of just using existing AI tools, this project lets you see all the steps of making an LLM. You get more control over how it works. It's more about learning than making the absolute best AI right away.
+
+# GitHub
+
+Code, documentation, and example can all be found on GitHub:
+
+[https://github.com/FareedKhan-dev/train-llm-from-scratch](https://github.com/FareedKhan-dev/train-llm-from-scratch)",FareedKhan557
+1i1ppr7,I rewrote my programming language from Python into Go to see the speed up.,161,https://www.reddit.com/r/Python/comments/1i1ppr7/i_rewrote_my_programming_language_from_python/,1736915880.0,59,"**What my project does:**
+
+I wrote a tree-walk interpreter in Python a while ago and posted it [here](https://www.reddit.com/r/Python/comments/1hnfqhi/i_wrote_a_turing_complete_language_interpreter_on/).
+
+
+
+**Target Audience:**
+
+Python and programming entusiasts.
+
+I was curious to see how much of a performance bump I could get by doing a 1-1 port to Go without any optimizations.
+
+Turns out, it's around **10X** faster, plus now I can create compiled binaries and include them in my Github releases.
+
+Take my [lang for a spin](https://github.com/momus2000/boa) and leave some feedback :)
+
+  
+**Utility:**
+
+None - It solves no practical problem that is not currently being done better.",OrderOk6521
+1hzpqxu,FuzzyAI - Jailbreak your favorite LLM,141,https://www.reddit.com/r/Python/comments/1hzpqxu/fuzzyai_jailbreak_your_favorite_llm/,1736697590.0,5,"My buddies and I have developed an [open-source](https://github.com/cyberark/FuzzyAI) fuzzer that is fully extendable. It’s fully operational and supports over 10 different attack methods, including several that we created, across various providers, including all major models and local ones like Ollama. You can also use the framework to classify your output and determine if it is adversarial. This is often done to create benchmarks, train your model, or train a detector.
+
+So far, we’ve been able to jailbreak every tested LLM successfully. We plan to maintain the project actively and would love to hear your feedback. We welcome contributions from the community!",ES_CY
+1hyxjqi,PyGAD 3.4.0 Released: Python library for optimization using the genetic algorithm.,126,https://www.reddit.com/r/Python/comments/1hyxjqi/pygad_340_released_python_library_for/,1736607301.0,7,"PyGAD is a Python library for solving general-purpose optimization problems using the genetic algorithm.
+
+GitHub repository: [https://github.com/ahmedfgad/GeneticAlgorithmPython](https://github.com/ahmedfgad/GeneticAlgorithmPython)
+
+Documentation: [https://pygad.readthedocs.io](https://pygad.readthedocs.io/)
+
+Quick release notes:
+
+1. The `delay_after_gen` parameter is removed from the [`pygad.GA`](http://pygad.GA) class constructor. 
+2. The `plot_pareto_front_curve()` method added to the `pygad.visualize.plot.Plot` class to visualize the Pareto front for multi-objective problems. 
+3. Created a new method called `unique_float_gene_from_range()` inside the `pygad.helper.unique.Unique` class to find a unique floating-point number from a range.
+4. The `Matplotlib` library is only imported when a method inside the `pygad/visualize/plot.py` script is used. 
+5. While making prediction using the `pygad.torchga.predict()` function, no gradients are calculated.
+6. The `gene_type` parameter of the `pygad.helper.unique.Unique.unique_int_gene_from_range()` method accepts the type of the current gene only instead of the full gene\_type list.
+7. More bug fixes.",ahmed26gad
+1hylc50,Are there any actual use cases of Python in Excel?,110,https://www.reddit.com/r/Python/comments/1hylc50/are_there_any_actual_use_cases_of_python_in_excel/,1736560899.0,104,"I’m trying to understand how useful it really is/ having not really touched it at all, I imagine someone versed in Python could optimize some of their workflow were they forced to work in excel. But given the fundamental processing limitations of excel I can’t imagine how scalable this is. Has anyone had practical experience using the Python - excel plugin to accomplish things easier than you could in either excel or Python alone and if so, what?",SizePunch
+1i0yb1m,"Leviathan: A Simple, Ultra-Fast EventLoop for Python asyncio",103,https://www.reddit.com/r/Python/comments/1i0yb1m/leviathan_a_simple_ultrafast_eventloop_for_python/,1736829877.0,23,"Hello Python community!
+
+I’d like to introduce Leviathan, a custom EventLoop for Python’s asyncio built in Zig.
+
+What My Project Does
+
+Leviathan is designed to be:
+
+- Simple: A lightweight alternative for Python’s asyncio EventLoop.
+
+- Ultra-fast: Benchmarked to outperform existing EventLoops.
+
+- Flexible: Although it’s still in early development, it’s functional and can already be used in Python projects.
+
+
+Target Audience
+
+Leviathan is ideal for:
+
+- Developers who need high-performance asyncio-based applications.
+
+- Experimenters and contributors interested in alternative EventLoops or performance improvements in Python.
+
+
+Comparison
+
+Compared to Python’s default EventLoop (or alternatives like uvloop), Leviathan is written in Zig and focuses on:
+
+1. Simplicity: A minimalistic codebase for easier debugging and understanding.
+
+
+2. Speed: Initial benchmarks show improved performance, though more testing is needed.
+
+
+3. Modern architecture: Leveraging Zig’s performance and safety features.
+
+
+
+It’s still a work in progress, so some features and integrations are missing, but feedback is welcome as it evolves!
+
+Feel free to check it out and share your thoughts: https://github.com/kython28/leviathan",kython28
+1i208uo,I've Created a Python Library That Tracks and Misleads Hackers,98,https://www.reddit.com/r/Python/comments/1i208uo/ive_created_a_python_library_that_tracks_and/,1736955838.0,5,"**Background**
+
+Hello everyone! A few months ago, I created a small web platform. Since I have many security engineer followers, I knew they would actively search for vulnerabilities. So, I decided to plant some realistic-looking fake vulnerabilities for fun. It was fun, and I realized that it can be actually very useful in other projects as well. I could monitor how many people were probing the platform while having them waste time on decoy vulnerabilities. Therefore, I've created BaitRoute: [https://github.com/utkusen/baitroute](https://github.com/utkusen/baitroute)
+
+**What My Project Does**
+
+It’s a web honeypot project that serves realistic, vulnerable-looking endpoints to detect vulnerability scans and mislead attackers by providing false positive results. It can be loaded as a library to your current project. It currently supports Django, FastAPI and Flask frameworks. When somebody hits a decoy endpoint, you can send that alarm to another service such as Sentry, Datadog, etc. to track hackers. Also, if you enable all rules, attackers' vulnerability scans become a mess with false-positive results. They'll waste considerable time trying to determine which vulnerabilities are genuine.
+
+**Target Audience**
+
+It can be used in web applications and API services.
+
+**Comparison**
+
+I’m not aware of any similar projects.
+
+",utku1337
+1hz1u57,How are European Python/AI devs landing US remote jobs? Just curious,90,https://www.reddit.com/r/Python/comments/1hz1u57/how_are_european_pythonai_devs_landing_us_remote/,1736618855.0,45,"Been wondering how fellow Python developers from Europe (I'm from Czech Republic) manage to land remote jobs with US companies. Not looking myself, just genuinely curious about the process and platforms people use.
+
+For those who've done it - what job sites worked for you? How do you handle the time difference? (I'm UTC+1)
+
+Especially interested to hear from those working with AI/LLMs, since that field seems to be booming in the US right now.",Content_Limit_9723
+1hzk4vb,Python with type hints and Mypy: regret for not using statically typed lang?,91,https://www.reddit.com/r/Python/comments/1hzk4vb/python_with_type_hints_and_mypy_regret_for_not/,1736678560.0,143,"If a company adopted Python and then, after several years, integrates MyPy, wouldn't they be better off if they'd start with a statically typed language instead of Python? 
+This sounds like an uphill battle to get to some half-baked type-safety, but I'm not versed in Python development, so asking the pros here (I realize this might not be the best place to ask this question, to say the least, but I'll give it a try)",VasiliyZukanov
+1i0lwjo,RichChk: Edit StarCraft maps in Python,88,https://www.reddit.com/r/Python/comments/1i0lwjo/richchk_edit_starcraft_maps_in_python/,1736795601.0,2,"# What My Project Does
+
+My project, [RichChk](https://github.com/sethmachine/richchk), allows directly editing all aspects of a StarCraft Brood War map in Python.  This is to allow those who make StarCraft custom games / maps (they can be thought of as ""mods"") a powerful way to use modern software practices to maintain and iterate on their maps, without using clunky GUIs.  I initially made this library for myself, as my own custom maps became too complicated to maintain using text macros and having to copy+paste script output to update the map each time I made changes to test it.  I named my project RichChk from the binary file format maps are stored in called [Scenario.chk ](http://www.staredit.net/wiki/index.php/Scenario.chk)and my library making it much **richer** and easier for a human to read/edit.  
+
+Some examples of custom StarCraft maps are [Battle of Helms Deep](http://www.staredit.net/sc1db/file/5070/) or even a re-creation of [Elder Scrolls IV Oblivion RPG](http://www.staredit.net/topic/15473/0/).  My library was not used to make those maps, but the idea is that going forward it is better to maintain and create such maps using this library.  
+
+RichChk is a fully statically typed codebase with 200+ unit tests.  I use GitHub actions to automatically run the tests on 3 different OSes (macOS, Linux, and Windows) to make sure it is cross-platform compatible, and no changes cause regressions.  In order to open StarCraft maps directly, the project uses the [StormLib API](http://www.zezula.net/en/mpq/stormlib.html) to read and write back the CHK data.  RichChk fully functions to edit trigger data, and in the future support for all other CHK sections can be added.  I am using RichChk right now on my own projects and it's been working great!  
+
+To be fully transparent, I am relatively new to Python development.  This is my first big Python project that's meant to showcase best practices like unit tests, static typing (mypy), linters / code style enforcement, functional programming, immutability, etc.  So this project was a way for me to learn what I think is modern Python while also be applied on something fun--StarCraft!  
+
+I have a blog post describing more details on why I made this library, how it works under the hood, and how I've applied coding best practices in creating it.    
+
+
+Blog article: [https://www.sethmachine.io/2025/01/06/richchk/](https://www.sethmachine.io/2025/01/06/richchk/)
+
+  
+For how to use this library, I have provided some examples here: [https://github.com/sethmachine/richchk?tab=readme-ov-file#usage](https://github.com/sethmachine/richchk?tab=readme-ov-file#usage) .  In the future I may provide a full example of a StarCraft custom map that is built using RichChk library.  
+
+# Target audience
+
+This project is primarily for those who have interest in StarCraft Brood War custom games / mapmaking, and know or are interested in using Python.  But it's also of potential interest to anyone learning how to apply best coding practices like static typing, unit tests, GitHub Workflows/Actions, pre-commit, linters, etc. to Python, in order to have a maintainable codebase.  
+
+I have described some of the coding best practices I have applied here if anyone is interested: [https://www.sethmachine.io/2025/01/06/richchk/#Coding-best-practices](https://www.sethmachine.io/2025/01/06/richchk/#Coding-best-practices)
+
+# Comparison
+
+There are numerous other Python based tools for editing StarCraft maps, but in general they are all just text macro tools that produce output that must be copy and pasted into an actual StarCraft map editor like [SCMDraft GUI](http://www.stormcoast-fortress.net/cntt/software/scmdraft/).  I do not know of any existing Python library that directly writes data into a StarCraft map, is statically type in modern Python, and is easy to use in modern coding projects etc.  My library allows possibly editing every aspect of a StarCraft map, not just the triggers.  
+
+I have discussed existing tools my blog post here for comparison: [https://www.sethmachine.io/2025/01/06/richchk/#Existing-tools](https://www.sethmachine.io/2025/01/06/richchk/#Existing-tools) 
+
+# GitHub
+
+GitHub: [https://github.com/sethmachine/richchk](https://github.com/sethmachine/richchk)
+
+Blog post: [https://www.sethmachine.io/2025/01/06/richchk/](https://www.sethmachine.io/2025/01/06/richchk/) 
+
+Note my blog and GitHub are not monetized, I have no monetary interest or gain from any of this.  This work is completely unrelated to my employer, and I am merely looking for feedback and sharing what I've done so I can be a better (Python) developer, and possibly help someone who might find my library useful.  ",sethtaxpayer
+1i07szz,DataBridge: Open-source local multimodal modular RAG system using Python,84,https://www.reddit.com/r/Python/comments/1i07szz/databridge_opensource_local_multimodal_modular/,1736749281.0,0,"Hey r/Python! I'm excited to share [DataBridge](https://github.com/databridge-org/databridge-core) \- a multimodal, modular fully local RAG system I've been working on.
+
+**What makes it different:**
+
+* Truly self-hosted - uses Postgres for vector storage (no cloud vector DBs), Local LLMs and embeddings through Ollama integration
+* Handles multiple document types (PDFs, Word docs, images, etc.)
+* Modular architecture - swap components as needed
+* Clean Python SDK for easy integration
+* Perfect for sensitive documents or air-gapped environments
+
+Everything runs locally without external API dependencies.
+
+**Looking for:**
+
+* 🤝 Early adopters and feedback
+* 💡 Feature requests and use cases
+* 🐛 Bug reports
+* 🌟 Any contributors welcome!
+
+I'd love to hear your thoughts and suggestions!
+
+Links:
+
+* GitHub: [https://github.com/databridge-org/databridge-core](https://github.com/databridge-org/databridge-core)
+* Docs: [https://databridge.gitbook.io/databridge-docs](https://databridge.gitbook.io/databridge-docs)
+",Advanced_Army4706
+1hydxxn,Transact durable compute library now supports asyncio and coroutines,69,https://www.reddit.com/r/Python/comments/1hydxxn/transact_durable_compute_library_now_supports/,1736540569.0,3,"Hi all,
+
+A few months ago I shared the Transact library, an ultra lightweight durable execution library:
+
+https://www.reddit.com/r/Python/comments/1ff8257/dbostransact_an_ultralightweight_durable/
+
+This week we added support for asyncio and coroutines.
+
+https://github.com/dbos-inc/dbos-transact-py/pull/168/files
+
+It super easy to use, no strange syntax or anything.
+
+    @DBOS.step()
+     async def example_step():
+        async with aiohttp.ClientSession() as session:
+            async with session.get(""https://example.com"") as response:
+                return await response.text()
+
+    @DBOS.workflow()
+     async def example_workflow()
+        body = await example_step()
+        return body
+
+
+https://github.com/dbos-inc/dbos-transact-py",jedberg
+1i09ip9,Niquests 3.12 — What's new in 2025,49,https://www.reddit.com/r/Python/comments/1i09ip9/niquests_312_whats_new_in_2025/,1736756840.0,18,"The Requests fork http client is growing rapidly and soon to hit his 1st million pulls.
+Since last time we published in this subreddit, we are proud to announce that:
+
+- Made SSE (Server side event) consumption natively integrated.
+- Brought HTTP/2+ WebSocket as a mainstream client.
+  - Within our Python ecosystem, we're the only one! Chrome & Firefox were capable ages ago!
+- Upgraded our Kyber768Draft post quantum implementation to standard Module Lattice 768 (ML-KEM-768).
+- Ensured free threaded support!
+  - Requests, and Niquests are the only trustworthy clients that can run on the experimental build.
+  - httpx was already crashing randomly when the GIL is enabled (mostly with http2). In the free threaded build, it crashes every single time (http1 or http2). Thus confirming the unsafe aspect of sharing httpx.Client between threads.
+- Allowed caching of the OCSP revocation status, via pickling your Session.
+- Using ping frames to keep alive (discretly) your HTTP/2+ connections perfectly, without ever leafting a finger.
+- Wrote guides on how to get the smoothest upgrade between Requests and Niquests while keeping all your plugins (e.g. betamax, requests-mock, responses, requests-oauthlib, ...).
+
+The project reached 1,1k+ stars thanks to you all.
+I receive a lot of positive feedback either pivately (mostly emails or hangouts) or publicly (via GH issues/PRs).
+
+**Next on the roadmap**
+
+- ECH (Encrypted Client Hello) and BBRv3 (a Congestion Control Algorithm) are under progress in our QUIC implementation.
+- Automated browser impersonation to escape most TLS-fingerprinting shadow banning methods.
+  - At first we will initially support latest Chrome fingerprint. It won't be enabled by default, through.
+- WebTransport using HTTP/3.
+  - The standard is almost ready! We already have the solid bases to introduce its support.
+- CRL discrete incremental watch support in addition to our OCSP implementation.
+- _You choose the next feature or fix! Got an idea, A reluctant pain to fix, Open an issue!_
+
+Those advancements may take awhile before landing in public releases. 
+We want to wait for an increased adoption by the community before we increase our maintainance burden.
+
+## What My Project Does
+
+Niquests is a HTTP Client. It aims to continue and expand the well established Requests library. For many years now, Requests has been frozen. Being left in a vegetative state and not evolving, this blocked millions of developers from using more advanced features.
+
+## Target Audience
+
+It is a production ready solution. So everyone is potentially concerned.
+
+## Comparison
+
+Niquests is the only HTTP client capable of serving HTTP/1.1, HTTP/2, and HTTP/3 automatically. The project went deep into the protocols (early responses, trailer headers, etc...) and all related networking essentials (like DNS-over-HTTPS, advanced performance metering, etc..)
+
+You may find the project at: https://github.com/jawah/niquests ",Ousret
+1hxtc13,I added a prediction results page to my Python football (Premier League soccer) prediction page.,46,https://www.reddit.com/r/Python/comments/1hxtc13/i_added_a_prediction_results_page_to_my_python/,1736473615.0,6,"A while ago I made a football predictor in Python to predict Premier League football results. 
+
+[Original thread](https://old.reddit.com/r/Python/comments/1e8ym80/i_created_a_script_that_predicts_premier_league/)
+
+The page would show predictions for the next 30 days of football matches and stay updated throughout the season. It uses a Gaussian Naive Bayes model to predict results based on past data. It uses the data from the 2021-2024 seasons.
+
+Tonight I've added a page that shows how well the predictor has been performing over the season. It pulls the season's results from the BBC and compares its predictions to the results. You can see on the site the correct predictions in green and incorrect predictions in red.
+
+Prediction results page: https://www.jimmyrustles.com/football/results
+
+Original prediction page: https://www.jimmyrustles.com/football
+
+Github repo: https://github.com/sgriffin53/football_predictor_flask
+
+**What My Project Does**
+
+The original project shows football predictions for the current season. This page shows how well the predictor is performing for the current season. It allows me to see which results were correct at a glance as it's colour coded.
+
+**Target Audience (e.g., Is it meant for production, just a toy project, etc.**
+
+This is mostly for me and my friend Jay, as we've been using it to bet on games (though its accuracy isn't great). The football prediction page gets about 10-15 human visitors a day, so this would also be useful to those visitors who come to see the predictions.
+
+**Comparison (A brief comparison explaining how it differs from existing alternatives.)**
+
+There are other football predicting sites out there, but like I said in my original post, this is just a hobbyist project. I'm not aiming to consistently beat the bookies like some sites out there, it's just a bit of fun so my friend and I can have a bet based on its predictions and hopefully one day get a decent win from it.
+
+In the future, I plan to make the predictions page be updated in real time with the BBC results so I can see which predictions are correct while the games are live.",haddock420
+1hygwow,Test & Code Season 2 - pytest plugins,32,https://www.reddit.com/r/Python/comments/1hygwow/test_code_season_2_pytest_plugins/,1736548241.0,3,"What? A whole season of pytest plugins? Yep!  
+
+This episode kicks off a season of pytest plugins.  
+
+Listen here: [https://testandcode.com/episodes/pytest-plugins](https://testandcode.com/episodes/pytest-plugins)
+
+In this episode:
+
+* Introduction to pytest plugins
+* The [pytest.org](https://pytest.org) pytest plugin list
+* Finding pytest related packages on PyPI
+* The Top pytest plugins list on [pythontest.com](https://pythontest.com)
+* Exploring popular plugins
+* Learning from plugin examples",variedthoughts
+1i20lvm,Any well known open-source python packages use Astral's uv tool?,27,https://www.reddit.com/r/Python/comments/1i20lvm/any_well_known_opensource_python_packages_use/,1736956811.0,27,"I'm looking a Astral's uv, and it seems very interesting to manage applications and their dependencies. Even for internal packages I can see its use, but I'm having a hard time seen the workflow for an open-source public package where you need to support multiple Python versions and test with them. 
+
+Do you know of any open-source package project that uses uv in its workflow?",CurroRodriguez
+1i16yuj,Shellphone - Terraria Player File Editor TUI,27,https://www.reddit.com/r/Python/comments/1i16yuj/shellphone_terraria_player_file_editor_tui/,1736864093.0,0,"Hi! In the days i started working on a Terraria player file editor.
+
+What my project does:
+
+* View base stats and body colors on an ascii-art render of a character
+* View all kinds of inventory slots(Inventory, Armor, Accessories...)
+* Edit items in said inventories
+
+I will keep it updated as there are lot of things that missing or buggy.
+
+Github: [Shellphone](https://github.com/kokasmark/shellphone)",kaakaaskaa
+1i2lw4i,"AutoResearch: A Pure-Python open-source LLM-driven research automation tool
+",26,https://www.reddit.com/r/Python/comments/1i2lw4i/autoresearch_a_purepython_opensource_llmdriven/,1737022779.0,4,"Hello, everyone
+
+I recently developed a new open-source LLM-driven research automation tool, called AutoResearch. It can automatically conduct various tasks related to machine learning research, the key function is:
+
+[Topic-to-Survey Automation](https://jlx0.github.io/auto_research/_examples_gallery/top_to_survey.html) \- In one sentence, **it converts a topic or research question into a comprehensive survey of relevant papers.** It generates keywords, retrieves articles for each keyword, merges duplicate articles, ranks articles based on their [impacts](https://jlx0.github.io/auto_research/target_code/auto_research.search.core.html#auto_research.search.core.AutoSearch.score_threshold), summarizes the articles from the topic, method, to results, and optionally checks code availability. It also organizes and zips results for easy access.
+
+When searching for research papers, the results from a search engine can vary significantly depending on the specific keywords used, even if those keywords are conceptually similar. For instance, searching for ""LLMs"" versus ""Large Language Models"" may yield different sets of papers. Additionally, when experimenting with new keywords, it can be challenging to remember whether a particular paper has already been checked. Furthermore, the process of downloading papers and organizing them with appropriate filenames can be tedious and time-consuming.
+
+This tool streamlines the entire process by automating several key tasks. It suggests multiple related keywords to ensure comprehensive coverage of the topic, merges duplicate results to avoid redundancy, and automatically names downloaded files using the paper titles for easy reference. Moreover, it leverages LLMs to generate summaries of each paper, saving researchers valuable time and effort in uploading it to ChatGPT and then conversing with it in a repetitive process.
+
+Additionally, there are some basic functionalities:
+
+* [Automated Paper Search](https://jlx0.github.io/auto_research/_examples_gallery/search_papers.html) \- Search for academic papers using keywords and retrieve metadata from Google Scholar, Semantic Scholar, and arXiv. Organize results by relevance or date, apply filters, and save articles to a specified folder.
+* [Paper Summarization](https://jlx0.github.io/auto_research/_examples_gallery/summarize_a_paper.html) \- Summarize individual papers or all papers in a folder. Extract key sections (abstract, introduction, discussion, conclusion) and generate summaries using GPT models. Track and display the total cost of summarization.
+* [Explain a Paper with LLMs](https://jlx0.github.io/auto_research/_examples_gallery/explain_a_paper.html) \- Interactively explain concepts, methodologies, or results from a selected paper using LLMs. Supports user queries and detailed explanations of specific sections.
+* [Code Availability Check](https://jlx0.github.io/auto_research/_examples_gallery/get_github_link.html) \- Check for GitHub links in papers and validate their availability.
+
+This tool is still under active development, I will add much more functionalities later on.
+
+I know there are many existing tools for it. But here are the **key distinctions and advantages** of the tool:
+
+* [Free and open-source](https://github.com/JLX0/auto_research/)
+* Python code-base, which enables convenient deployment, such as [Google Colab notebook](https://colab.research.google.com/drive/1Xj0xTpHvpnPfmK9tYnI8Ep7oRKrQ9gn7?usp=sharing)
+* [API documentation](https://jlx0.github.io/auto_research/target_code/auto_research.html#module-auto_research) are available
+* No additional API keys besides LLM API keys are required (No API keys, such as Semantic Scholar keys, are needed for literature search and downloading papers)
+* Support multiple search keywords.
+* Rank the papers based on their [impacts](https://jlx0.github.io/auto_research/target_code/auto_research.search.core.html#auto_research.search.core.AutoSearch.score_threshold), and consider the most important papers first.
+* Fast literature search process. It only takes about 3 seconds to automatically download a paper.
+
+**------Here is a quick installation-free** [**Google Colab demo**](https://colab.research.google.com/drive/1Xj0xTpHvpnPfmK9tYnI8Ep7oRKrQ9gn7?usp=sharing)**------**
+
+Here is the [official website of AutoResearch](https://jlx0.github.io/auto_research/).
+
+Here is the [GitHub link to AutoResearch](https://github.com/JLX0/auto_research/).
+
+**------Please star the** [**repository**](https://github.com/JLX0/auto_research/) **and share it if you like the tool!------**
+
+Please DM me or reply in the post if you are interested in collaborating to develop this project!",constantmotion385
+1i270co,WASM-powered codespaces for Python notebooks on GitHub,23,https://www.reddit.com/r/Python/comments/1i270co/wasmpowered_codespaces_for_python_notebooks_on/,1736973110.0,0,"**What my project does**
+
+During a hackweek, we built this project that allows you to run [marimo](https://github.com/marimo-team/marimo) and Jupyter notebooks directly from GitHub in a Wasm-powered, codespace-like environment. What makes this powerful is that we mount the GitHub repository's contents as a filesystem in the notebook, making it really easy to share notebooks with data.
+
+All you need to do is prepend 'https://marimo.app' to any Python notebook on GitHub. Some examples:
+
+* Jupyter Notebook: [https://marimo.app/github.com/jakevdp/PythonDataScienceHandb...](https://marimo.app/github.com/jakevdp/PythonDataScienceHandbook/blob/master/notebooks/02.08-Sorting.ipynb)
+* marimo notebook: [https://marimo.app/github.com/marimo-team/marimo/blob/07e8d1...](https://marimo.app/github.com/marimo-team/marimo/blob/07e8d14109f7312f19916fd13e4046a561a740f8/examples/third_party/polars/polars_example.py)
+
+Jupyter notebooks are automatically converted into marimo notebooks using basic static analysis and source code transformations. Our conversion logic assumes the notebook was meant to be run top-down, which is usually but not always true \[2\]. It can convert many notebooks, but there are still some edge cases.
+
+We implemented the filesystem mount using our own FUSE-like adapter that links the GitHub repository’s contents to the Python filesystem, leveraging Emscripten’s filesystem API. The file tree is loaded on startup to avoid waterfall requests when reading many directories deep, but loading the file contents is lazy. For example, when you write Python that looks like
+
+    with open(""./data/cars.csv"") as f:
+        print(f.read())
+    
+    # or
+    
+    import pandas as pd
+    pd.read_csv(""./data/cars.csv"")
+
+behind the scenes, you make a request \[3\] to *https://raw.githubusercontent.com/<org>/<repo>/main/data/cars.csv*
+
+Docs: [https://docs.marimo.io/guides/publishing/playground/#open-notebooks-hosted-on-github](https://docs.marimo.io/guides/publishing/playground/#open-notebooks-hosted-on-github)
+
+\[2\] [https://blog.jetbrains.com/datalore/2020/12/17/we-downloaded-10-000-000-jupyter-notebooks-from-github-this-is-what-we-learned/](https://blog.jetbrains.com/datalore/2020/12/17/we-downloaded-10-000-000-jupyter-notebooks-from-github-this-is-what-we-learned/)
+
+\[3\] We technically proxy it through the playground [https://marimo.app](https://marimo.app) to fix CORS issues and GitHub rate-limiting.
+
+**Target Audience**
+
+Anyone who creates or views Python notebooks in GitHub.
+
+**Comparison**
+
+nbsanity: This library renders static notebooks, but does not make them interactive. Also any data in the GitHub repo will not be pulled in (they must live inside the notebook).
+
+GitHub Notebook renderer: GitHub has a native notebook renderer for ipynb files. But this is also static and you cannot interact with it. It is also limited in what it can render (it prevents external scripts and css, so lots of charting libraries fail).",mmmmmmyles
+1hy1q3n,I created a linter for your dependencies (requirements.txt file!),23,https://www.reddit.com/r/Python/comments/1hy1q3n/i_created_a_linter_for_your_dependencies/,1736505842.0,10,"Hey there. I've been working on a dependencies-related product for the last year. A lot of engineering teams that I've seen are building their own internal tooling to check on dependencies.
+
+In short, people either update too frequently or don't update at all.
+
+So, I decided to create a simple linter that checks all the main issues and best practices, comes with sensible defaults, and allows you to adjust it to your needs.
+
+It supports npm/yarn, Go, pip, and Cargo. Any feedback is welcome!
+
+Link: [https://github.com/DepsHubHQ/depshub](https://github.com/DepsHubHQ/depshub)
+
+  
+**What My Project Does**  
+Checks your requirements.txt file on 20+ rules.  
+  
+**Target Audience**  
+Mostly developers running it locally or on the CI. Still in beta.  
+  
+**Comparison**  
+There are no popular linters for dependencies at all. The most popular tool to deal with dependencies is dependabot but it works in a completely different way.",semanser
+1hz002h,Txtify v1.0.0: FREE AI-Powered Transcription & Translation 🚀 ,21,https://www.reddit.com/r/Python/comments/1hz002h/txtify_v100_free_aipowered_transcription/,1736614072.0,2,"Hey everyone!
+
+I’m really happy to share **Txtify**, now officially released as **v1.0.0**! 🎉  
+**Txtify** is a **free, open-source web app** that converts audio and video into text using advanced AI models. It’s designed to be **self-hostable**, **privacy-friendly**, and packed with features to simplify transcription and translation for everyone.
+
+**GitHub Repository:** [https://github.com/lkmeta/txtify](https://github.com/lkmeta/txtify)
+
+**Online Demo:** Try the online simulation demo at [Txtify Website](https://txtify-web.vercel.app/).
+
+# 🔥 What’s New in v1.0.0?
+
+* **Dockerized Deployment:** Easily set up Txtify on any platform with a simple Docker container.
+* **Stable-ts Integration:** Improved transcription accuracy with precise timecodes.
+* **Performance Enhancements:** Faster and more stable for smoother user experience.
+
+# 🎯 Target Audience:
+
+* **Translators & Transcriptionists**: Simplify workflows with accurate and fast transcription.
+* **Content Creators**: Generate subtitles and transcripts to improve accessibility (for your vlogs :)).
+* **Developers**: Integrate Txtify into projects or contribute (very welcome).
+* **Researchers**: Analyze large datasets of audio and video files easily.
+
+# 🆚 Why Txtify Stands Out:
+
+* **High-Accuracy Transcriptions**: Use Whisper and Stable-ts for state-of-the-art results.
+* **Supports Multiple Languages**: Transcribe and translate in over 30 languages (with DeepL key).
+* **Various Export Formats**: `.txt`, `.srt`, `.vtt`, `.sbv`
+* **Open-Source and Self-Hostable**: Free to use and deploy on your own terms—no subscriptions needed.
+* **Runs Anywhere**: Use the model that fits your device on your self-hosted server.
+
+# 💡 What’s Next?
+
+I’d love to hear your ideas for the future of Txtify! Some possibilities include:
+
+* Real-Time Transcription: Add live transcription features.
+* API Access: Enable integrations with third-party applications.
+* UI/UX Improvements: What would make Txtify even more user-friendly?
+
+# Hope You Enjoy It!
+
+Would love to hear your feedback, ideas, or suggestions! Let me know what you think or join the community by contributing to the project. 😊  
+  
+**Report Issues**:
+
+* **Contact Form**: Submit feedback via the [contact page](https://txtify-web.vercel.app/contact).
+* **GitHub Issues**: Open an issue on the [GitHub repository](https://github.com/lkmeta/txtify/issues).",ChoiceUpset5548
+1hzpohx,Built My First Document Scanning and OCR App – Would Love to Hear Your Thoughts!,19,https://www.reddit.com/r/Python/comments/1hzpohx/built_my_first_document_scanning_and_ocr_app/,1736697403.0,3,"Hi everyone! 👋
+
+I recently finished **ocr-tools** ,a small project, and as someone still learning and exploring new skills, I wanted to share it with you all! It’s a simple web app where you can:
+
+# What My Project Does
+
+* **Upload an image** (like a photo of a document).
+* **Automatically detect the document's corners** and apply perspective correction.
+* **Extract text** from the document with OCR and save it as a searchable PDF.
+
+I built this using **FastAPI**, along with **OpenCV** for the image processing and **Tesseract** for the OCR. The process taught me so much about working with images, handling user inputs, and creating APIs. It’s designed to be straightforward and helpful for anyone who wants to scan documents or images quickly and cleanly.
+
+Here are some of the main features:
+
+* **Clean UI:** Upload images easily and process them in a few clicks.
+* **Perspective correction:** Automatically detects and crops the document to give you a straightened view.
+* **OCR output:** Extracts text and saves it to a PDF.
+
+# Target Audience
+
+It is just a toy project to learn new skills
+
+# Comparison
+
+There are a lot of projects like this and better than this one
+
+Thanks for reading, and I hope you find it as fun as I did building it! ❤️
+
+PS: If you have any tips for improving OCR accuracy or making the corner detection more robust, please let me know! 🙏
+
+**Github link**: [https://github.com/pcastiglione99/ocr-tools](https://github.com/pcastiglione99/ocr-tools)",pcastiglione99
+1i12yib,"Develop web applications with wwwpy, which is scalable, customizable, and developer-friendly 🚀
+",16,https://www.reddit.com/r/Python/comments/1i12yib/develop_web_applications_with_wwwpy_which_is/,1736849578.0,9,"This post announces the first installable version of wwwpy. It is still in its infancy, but I hope you will see the quality and direction of this Python framework for developing web applications.
+
+* Repository [https://github.com/wwwpy-labs/wwwpy](https://github.com/wwwpy-labs/wwwpy) 
+* Homepage [https://wwwpy.dev/](https://wwwpy.dev/) 
+
+Like any tool, libraries and frameworks have trade-offs. Some have poor trade-offs, limited strengths, and numerous weaknesses. The goal of wwwpy is to achieve an optimal trade-off: providing the best possible balance between ease of use and power. ⚖️
+
+How do wwwpy achieve this? By utilizing all available technologies without restricting or obscuring access to them. With wwwpy, you can leverage pre-built UI components to rapidly build interfaces. Still, if you need more control, the browser's DOM, HTML, and CSS technologies are fully accessible. 🎨
+
+At its core, wwwpy aims to ease access to technology rather than hinder it. For example, when you create a component, you're effectively working with standard HTML custom Web Components, extending familiar technologies rather than reinventing the wheel. 🛠️
+
+**What My Project Does**
+
+Develop web applications quickly, Python all the way down.
+
+The vision of wwwpy:
+
+* **✨ Jumpstart Your Projects**: With just a couple of commands, get a head start on building web UIs, allowing you to focus on coding and scaling your application.
+* **💻 Build Web UIs**: Create web interfaces without focusing (too much :P) on the front end. Everything is Python. You can avoid HTML/DOM/CSS/JavaScript, but you can use its full power if you want. Use the drag-and-drop UI builder for rapid prototyping while still being able to easily create, extend, and customize UIs as needed.
+* **🏗️ Integrated Development Environment**: use an intuitive UI building experience within the development environment, making it easy to edit properties and components as you go.
+* **🔗 Direct Code Integration**: UI components are fully reflected in the source code, allowing manual edits. Every change is versionable and seamlessly integrates with your source code repository.
+* **🔄 Hot reload**: Any change to the source code is immediately reflected in the running application when in dev-mode.
+* **🖥️ Client-server**: Call server-side functions from the browser seamlessly without writing API endpoints. You can also call the browser(s) from the server to push changes and information to it.
+* **📈 Versatile Scalability**: From quick UI prototypes to large-scale enterprise applications, wwwpy handles everything from simple interfaces to complex projects with external dependencies and integrations.
+
+**Target Audience**
+
+The primary audience for wwwpy consists of Python developers looking to build web applications efficiently and effectively. Additionally, it caters to teams and organizations that want to streamline their development processes and enhance collaboration while working on complex web projects. By focusing on a Python-centric approach, wwwpy aims to empower developers to create robust web applications while leveraging their existing skills and knowledge in Python. 💪
+
+**Comparison**
+
+Roughly, wwwpy is in the same segment as Streamlit, NiceGUI, and Anvil Works. As expected, my approach has a different philosophy that I'm still shaping based on your feedback. Read the previous Reddit [post](https://www.reddit.com/r/Python/comments/1fcwvuk/build_web_applications_with_wwwpy_for_backend/) for more details.
+
+
+
+**Remarks**
+
+One of the current focuses is to understand what problems you are trying to solve and get early feedback to adjust the direction of the development of wwwpy. The current characteristics in (and have in mind for the future) wwwpy come from past projects in various languages: Kotlin, Rust, C#, Dart, Lazarus, and Delphi. However, the best evolution of wwwpy needs to drive its growth based on your feedback. 💬
+
+
+
+Try [wwwpy](https://wwwpy.dev) today and let me know your thoughts! Your feedback will help shape the direction of this Python-first web framework. Whether you're building a simple prototype or a complex application, I'd love to hear about your experience. 🎉
+
+",simone_giacomelli
+1i09qro,depthviz - Python CLI tool for generating depth tracking overlays for freediving videos,16,https://www.reddit.com/r/Python/comments/1i09qro/depthviz_python_cli_tool_for_generating_depth/,1736757911.0,0,"Hello, everyone! 👋
+
+I'm currently developing [depthviz](https://github.com/noppanut15/depthviz), an open-source command-line tool written in Python that generates depth-tracking overlays for freediving videos using dive computer logs.
+
+**What My Project Does:**
+
+`depthviz` automates the process of adding depth information to freediving videos. It takes exported dive logs (CSV, XML, and manual CSV input are currently supported) from dive computers and generates an MP4 video overlay. This overlay can then be combined with the original freediving footage in any video editing software.
+
+Key features:
+
+* Parses various dive log formats (Apnealizer, Shearwater, manual CSV input).
+* Performs linear interpolation to create smooth depth profiles from potentially sparse data.
+* Generates an MP4 video overlay with customizable text formats for depth display.
+
+**Target Audience:**
+
+`depthviz` is primarily targeted at:
+
+* Freedivers who want to enhance their video content with accurate depth information.
+* Freediving instructors/coaches and athletes who want to analyze dive profiles more effectively.
+
+While it's currently geared towards individual use and analysis, I aim to improve it for broader applications in the future.
+
+**Comparison:**
+
+Currently, I cannot find available open-source or dedicated tools that directly generate depth-tracking overlays from dive computer logs for freediving. Most freedivers resort to manually adding depth information in video editing software, which is time-consuming and prone to errors. `depthviz` provides an automated and more accurate solution.
+
+Some dive log analysis software exists, but they typically focus on generating graphs and charts, not video overlays. `depthviz` bridges this gap by directly creating a visual element that can be integrated into videos.
+
+**GitHub Repo:** [https://github.com/noppanut15/depthviz](https://github.com/noppanut15/depthviz)
+
+I'm also looking for feedback from the community on:
+
+* Code quality and best practices.
+* Potential improvements and new features.
+* Support for additional data formats (I'm particularly looking for Suunto .FIT freediving log files to test).
+* Any other technical aspects of the project.
+
+All feedback, bug reports, and pull requests are welcome! 😊",noppanut15
+1i11p90,Nyxelf : Another python tool for analysing ELF binaries,13,https://www.reddit.com/r/Python/comments/1i11p90/nyxelf_another_python_tool_for_analysing_elf/,1736843885.0,5,"[https://github.com/M3rcuryLake/Nyxelf](https://github.com/M3rcuryLake/Nyxelf)
+
+What it does:
+
+Nyxelf is a powerful tool for analyzing malicious Linux ELF binaries, offering both static and dynamic analysis. It combines tools like readelf, objdump, and pyelftools for static analysis with a custom sandbox for dynamic analysis in a controlled environment using QEMU, a minimal Buildroot-generated image, and strace. 
+
+
+Direct comparison:
+
+I couldn't find any direct comparison, but the idea for buildroot sandbox was pretty much inspired by [LiSa Sandbox](https://github.com/danielpoliakov/lisa). LiSa is project providing automated Linux malware analysis on various cpu architectures 
+
+Target audience:
+
+The target audience for Nyxelf includes malware analysts, and reverse engineers who focus on analyzing malicious Linux ELF binaries. The intuitive GUI powered by pywebview also makes it accessible for learners and hobbyists who are exploring the intricacies of ELF binary analysis without requiring deep expertise in command-line tools.
+",neptunym
+1i0k96j,Indentation-based syntax for Clojure,12,https://www.reddit.com/r/Python/comments/1i0k96j/indentationbased_syntax_for_clojure/,1736791611.0,4,"[Indentation-based syntax for Clojure](https://github.com/ilevd/cwp)
+
+**What My Project Does**
+
+Provides indentation-based, Python-like syntax for Clojure.
+
+**Target Audience**
+
+Developers who want to try Clojure, but its syntax looks weird for them. It can be a starting point to dive into Clojure and its ecosystem. Due its indentation-based nature it can be interesting for Python developers. Also it can be interesting for programming languages designers and developers.
+
+**Comparison**
+
+Compared to Clojure syntax the project provides more familiar and traditional non-lisp syntax: C-style function call, infix notation for math operations, less parentheses.
+
+Compared to Python the project provides more functional programming, Clojure/Java ecosystem.",ilevd
+1i1s353,Prompt-Template: A flexible and lightweight prompt templating library,11,https://www.reddit.com/r/Python/comments/1i1s353/prompttemplate_a_flexible_and_lightweight_prompt/,1736925300.0,0,"I recently published a library called [prompt-template](https://github.com/Goldziher/prompt-template). 
+
+It’s a Python library designed to make working with composable templates easier and safer, particularly those involving JSON examples. The library supports incremental population, validation, and enhanced usability compared to existing built-in alternatives.
+
+## Key Features
+- Template Validation: Catch errors like invalid or missing keys early.
+- Support for JSON Structures: Work seamlessly with nested braces and JSON.
+- Incremental Population: Populate templates step-by-step.
+- Automatic Value Serialization: Serialize input values without extra effort.
+- Clear Error Messages: Debug your templates with helpful feedback.
+- Type Hints: Write safer and more predictable code.
+
+## Target Audience
+
+This library is aimed at developers who frequently work with dynamic message templates, such as AI ""tool-use"" prompts or other JSON-heavy scenarios. It is production-ready and has a full test suite. 
+
+## Comparison
+
+Existing options like Python's `str.format` are prone to collisions when working with JSON structures due to using curly braces. The `string.Template` class offers safer templating with `${variable}` syntax but lacks features such as validation and incremental template population. 
+
+This library bridges this gap by offering these functionalities as a drop-in replacement for `string.Template`.
+
+## Example Usage
+
+```python
+from prompt_template import PromptTemplate
+
+# Basic usage with JSON
+template = PromptTemplate(""""""
+{
+    ""user"": ""${username}"",
+    ""settings"": {
+        ""theme"": ""${theme}"",
+        ""notifications"": ${notifications}
+    }
+}
+"""""")
+
+result = template.to_string(
+    username=""john_doe"",
+    theme=""dark"",
+    notifications={""email"": True, ""push"": False}
+)
+
+# Incremental population
+base = PromptTemplate(""The ${animal} jumped over the ${obstacle} in ${location}."")
+partial = base.substitute(animal=""fox"", obstacle=""fence"")
+final = partial.to_string(location=""garden"")
+
+# Built-in validation
+template = PromptTemplate(""Hello ${name}!"")
+try:
+    template.to_string(name=""World"", invalid_key=""value"")  # Raises InvalidTemplateKeysError
+except InvalidTemplateKeysError as e:
+    print(f""Invalid keys provided: {e.invalid_keys}"")
+```
+
+Check out [the GitHub repository](https://github.com/Goldziher/prompt-template) for more details. If you find the library helpful, a ⭐ on the repo would mean a lot! 😊",Goldziher
+1i1b7ry,I made a Twitter bot that offers YT timestamps,11,https://www.reddit.com/r/Python/comments/1i1b7ry/i_made_a_twitter_bot_that_offers_yt_timestamps/,1736875317.0,11,"What My Project Does
+
+Tag @TimeStampBuddy on X (formerly Twitter) with the link to a YouTube video, and it will provide timestamps.
+
+Target Audience
+
+The actual target audience are devs that want to make twitter bots. It's free to use and it's free to run/host. Feel free to clone the repo and make your own changes. Let me know if there is any extra info I could provide.
+
+Comparison
+
+I'm not aware of any other live twitter bot that offers this service.
+
+AskDexa (https://github.com/dexaai/xbot) is another live twitter bot repo. My code is much simpler, making it easier to adapt for others who want to make their own Twitter bots.
+
+
+Github: https://github.com/Mihaiii/TimeStampBuddy",Either-Job-341
+1hz9krl,AWS S3 data ingestion and augmentation patterns using DuckDB and Python,9,https://www.reddit.com/r/Python/comments/1hz9krl/aws_s3_data_ingestion_and_augmentation_patterns/,1736639749.0,0,[http://bicortex.com/aws-s3-data-ingestion-and-augmentation-patterns-using-duckdb-and-python/](http://bicortex.com/aws-s3-data-ingestion-and-augmentation-patterns-using-duckdb-and-python/),dingopole
+1i00vbq,Monday Daily Thread: Project ideas!,10,https://www.reddit.com/r/Python/comments/1i00vbq/monday_daily_thread_project_ideas/,1736726431.0,0,"# Weekly Thread: Project Ideas 💡
+
+Welcome to our weekly Project Ideas thread! Whether you're a newbie looking for a first project or an expert seeking a new challenge, this is the place for you.
+
+## How it Works:
+
+1. **Suggest a Project**: Comment your project idea—be it beginner-friendly or advanced.
+2. **Build & Share**: If you complete a project, reply to the original comment, share your experience, and attach your source code.
+3. **Explore**: Looking for ideas? Check out Al Sweigart's [""The Big Book of Small Python Projects""](https://www.amazon.com/Big-Book-Small-Python-Programming/dp/1718501242) for inspiration.
+
+## Guidelines:
+
+* Clearly state the difficulty level.
+* Provide a brief description and, if possible, outline the tech stack.
+* Feel free to link to tutorials or resources that might help.
+
+# Example Submissions:
+
+## Project Idea: Chatbot
+
+**Difficulty**: Intermediate
+
+**Tech Stack**: Python, NLP, Flask/FastAPI/Litestar 
+
+**Description**: Create a chatbot that can answer FAQs for a website.
+
+**Resources**: [Building a Chatbot with Python](https://www.youtube.com/watch?v=a37BL0stIuM)
+
+# Project Idea: Weather Dashboard
+
+**Difficulty**: Beginner
+
+**Tech Stack**: HTML, CSS, JavaScript, API
+
+**Description**: Build a dashboard that displays real-time weather information using a weather API.
+
+**Resources**: [Weather API Tutorial](https://www.youtube.com/watch?v=9P5MY_2i7K8)
+
+## Project Idea: File Organizer
+
+**Difficulty**: Beginner
+
+**Tech Stack**: Python, File I/O
+
+**Description**: Create a script that organizes files in a directory into sub-folders based on file type.
+
+**Resources**: [Automate the Boring Stuff: Organizing Files](https://automatetheboringstuff.com/2e/chapter9/)
+
+Let's help each other grow. Happy coding! 🌟",AutoModerator
+1hy60oj,"txtai 8.2 released: Simplified LLM messages, Graph RAG attribute filters and multi-CPU/GPU encoding",10,https://www.reddit.com/r/Python/comments/1hy60oj/txtai_82_released_simplified_llm_messages_graph/,1736520530.0,0,"Hello r/Python
+
+It's been a while since I've posted about txtai here. The most popular (and first) txtai post happened here 4 years ago. [https://www.reddit.com/r/Python/comments/i8ygwi/txtai\_aipowered\_engine\_for\_contextual\_search\_and/](https://www.reddit.com/r/Python/comments/i8ygwi/txtai_aipowered_engine_for_contextual_search_and/)
+
+Thank you to the community for all the support over the years, txtai is now nearing 10K stars on GitHub!
+
+txtai is an all-in-one embeddings database for semantic search, LLM orchestration and language model workflows. Since this original post, an ecosystem has developed past just vector search. It now supports Agents, RAG and other LLM orchestration pipelines. It's probably more similar now to LangChain than other vector databases but it's still built on a vector database foundation.
+
+The main goal of txtai is being able to start small and local then scale up. In other words, a simple Faiss/SQLite vector database with local LLMs. Then for production, the system can instead load data into Postgres/pgvector and either use LLM API services or local services like Ollama/vLLM.
+
+txtai is fully open source, licensed as Apache 2.0.
+
+GitHub: [https://github.com/neuml/txtai](https://github.com/neuml/txtai)  
+Release Notes: [https://github.com/neuml/txtai/releases/tag/v8.2.0](https://github.com/neuml/txtai/releases/tag/v8.2.0)",davidmezzetti
+1i2kafp,DeepEval: The Open-Source LLM Evaluation Framework,8,https://www.reddit.com/r/Python/comments/1i2kafp/deepeval_the_opensource_llm_evaluation_framework/,1737015363.0,0,"Hello everyone, I've been working on DeepEval over the past \~1 year and managed to somehow grow it to almost half a million monthly downloads now. I thought it would be nice to share what it does and how may it help.
+
+**What My Project Does**
+
+DeepEval is an open source LLM evaluation framework that started off as ""Pytest for LLMs"". This resonated surprisingly well with the python community and those on hackernews, which really motivated me to keep working on it since. DeepEval offers a ton of evaluation metrics powered by LLMs (yes a bit weird I know, but trust me on this one), as well as a whole ecosystem to generate evaluation datasets to help you get up and running with LLM testing even if you have no testset to start with.
+
+In a nutshell, it has:
+
+* (Mostly) Research backed, SOTA metrics covering chatbots, agents, and RAG.
+* Dataset generation, very useful for those with no evaluation dataset and don't have time to prepare one.
+* Tightly integrated with Pytest. Lots of big companies turns out are including DeepEval in their CI/Cd pipelines
+* Free platform to store datasets, evaluation results, catch regressions, etc.
+
+**Who is this for?**
+
+DeepEval is for anyone building LLM applications, or just want to read more about the space. We put out a lot of educational content to help folks learn about best practices around LLM evals.
+
+**Last Remarks**
+
+Not much really, just wanted to share this, and drop the repo link here: [https://github.com/confident-ai/deepeval](https://github.com/confident-ai/deepeval)",Ok_Constant_9886
+1i25y78,Is it a good practice to wrap immutable values in list's or other mutable types to make them mutable,9,https://www.reddit.com/r/Python/comments/1i25y78/is_it_a_good_practice_to_wrap_immutable_values_in/,1736970347.0,39,"so the question is really simple is it this good practice
+
+    def mod_x(x):
+      x[0] += 1
+    
+    val = [42]
+    mod_x(val)
+
+is this ok to do I dont have a spesific use case for this except maybe implementing a some data structures. I am just wondering if this is a good/bad practice GENERALLY ",XFajk_
+1hzszu4,spss syntax to pandas,9,https://www.reddit.com/r/Python/comments/1hzszu4/spss_syntax_to_pandas/,1736705894.0,10,"does anyone have a good resource showing spss syntax to python pandas, a crosswalk showing the code?  i am aware that not everything is a 1 to 1 match.  but most of the tabular data wrangling the methodology is the same. thanks western watts",western_watts
+1i1tg3u,Slixmpp 1.8.6 - XMPP/Jabber Library for Python - SleekXMPP,7,https://www.reddit.com/r/Python/comments/1i1tg3u/slixmpp_186_xmppjabber_library_for_python/,1736931711.0,0,"Slixmpp 1.8.6 - XMPP/Jabber Library for Python - SleekXMPP
+
+[https://blog.mathieui.net/en/slixmpp-1.8.6.html](https://blog.mathieui.net/en/slixmpp-1.8.6.html)",Neustradamus
+1i0t5zy,Kitten Mixer: Generating Adorable Kittens with Variational Autoencoders,6,https://www.reddit.com/r/Python/comments/1i0t5zy/kitten_mixer_generating_adorable_kittens_with/,1736814242.0,0,"# What My Project Does
+
+Ever wondered what happens when you blend two cute cats into one? This is possible with the power of Variational Autoencoders (VAEs). In my latest project, I trained a VAE on a cat faces dataset to generate unique cat images. I also created a website where you can experience it yourself: [Kitten Mixer Website](https://mezclador-gatitos.streamlit.app/).
+
+# Target Audience
+
+This project is a fun and hands-on way to explore the capabilities of generative models and get a better understanding of how VAEs work. If you're curious about AI and want to dive into a creative project, this one’s for you!
+
+# Comparison
+
+While most VAE projects focus on blending images of celebrities or human faces, this project takes a different approach by combining cat faces. Additionally, it includes an interactive web app where users can directly experiment with the model, making it both educational and entertaining.
+
+# Learn More
+
+If you want to learn more, check out my [blog post](https://dylannalex.github.io/kitten_mixer/) for a data science perspective and explore the [GitHub repository](https://github.com/dylannalex/mezclador_de_gatitos/blob/main/README.en.md).",dylannalex01
+1hy2ggg,Extending the ArgumentParser to accept arbitrary conditional arguments,6,https://www.reddit.com/r/Python/comments/1hy2ggg/extending_the_argumentparser_to_accept_arbitrary/,1736508831.0,2,"Hi r/Python! I made a little package to extend the native ArgumentParser to accept conditional arguments. It already has the ability to use subcommands, but you can only use one, so conditional arguments can't be parallel or hierarchical. With the [conditional-parser](https://github.com/landoskape/conditional-parser) you can. 
+
+## Differences to existing packages
+The argparse module includes the possibility of using subparsers, and these are great when there is a single
+condition that determines all the other arguments, but it isn't useful for situations where multiple 
+subparsers are required in parallel, especially when you want to use it in relation to non-positional 
+arguments, it's a bit harder to use for hierarchical dependencies, and it's harder to use for non-disjoint
+sets of conditional arguments. 
+
+There are a few other implementations out there that claim to do similar things. These are useful, but there are two downsides with most of the ones I found:
+1. They require users to learn a new structure for constructing ArgumentParsers. This increases overhead and prevents the seamless integration of conditional arguments into pre-existing ArgumentParsers. For this package, a user only needs to learn how to use one new method: the ``add_conditional`` method, which is pretty simple and straightforward.
+2. They break the usefulness of help messages. I think this is super important because I probably won't remember exactly what I coded a month from now, much less a year or more. So keeping help messages as functional as possible is important. This package could probably use some improvements in adding info about possible conditional arguments to help messages, but I haven't included that yet. 
+
+## Examples
+This simple example shows how to use the conditional parser
+```python
+parser = ConditionalArgumentParser(description=""A parser with conditional arguments."")
+parser.add_argument(""--use-regularization"", default=False, action=""store_true"", help=""Uses regularization if included."")
+dest = ""use_regularization""
+cond = True
+parser.add_conditional(dest, cond, ""--regularizer-lambda"", type=float, default=0.01, help=""The lambda value for the regularizer."")
+
+args = [""--use-regularization"", ""--regularizer-lambda"", ""0.1""]
+parsed_args = parser.parse_args(args=args)
+```
+
+This example shows how to implement a conditional parser with multiple conditional arguments in parallel. It also shows how you can use callable conditionals for more complex control of when to add conditional arguments. 
+
+```python
+parser = ConditionalArgumentParser(description=""A parser with parallel conditional arguments."")
+
+parser.add_argument(""dataset"", type=str, help=""Which dataset to use for training/testing."")
+
+dest = ""dataset""
+condition = ""dataset1""
+parser.add_conditional(dest, condition, ""--dataset1-prm1"", help=""prm1 for dataset1"")
+parser.add_conditional(dest, condition, ""--dataset1-prm2"", help=""prm2 for dataset1"")
+
+dest = ""dataset""
+condition = ""dataset2""
+parser.add_conditional(dest, condition, ""--dataset2-prmA"", help=""prmA for dataset2"")
+parser.add_conditional(dest, condition, ""--dataset2-prmB"", help=""prmB for dataset2"")
+
+dest = ""dataset""
+condition = lambda dest: dest in [""dataset3"", ""dataset4""]
+parser.add_conditional(dest, condition, ""--datasets34-prmX"", help=""prmX for datasets 3 and 4"")
+parser.add_conditional(dest, condition, ""--datasets34-prmY"", help=""prmY for datasets 3 and 4"")
+```",land0skape
+1i0ywzo,Company base frappe framework or Custom?,4,https://www.reddit.com/r/Python/comments/1i0ywzo/company_base_frappe_framework_or_custom/,1736832069.0,2,"I was planning and also in the middle of excuting on developing a base for a company in which all other products will be shipped leveraging it 
+Like developing microservice auth managment,  user managment,.... many reusable services 
+My goal here is to have scalable and performant base , making it handle generous amount of traffic and easy to scale when needed.
+
+So Frappe Framework ?
+Or custome Next.js frontend 
+                      Nest.js microservice backend?",Horror-Earth5926
+1hz9oaq,Sunday Daily Thread: What's everyone working on this week?,5,https://www.reddit.com/r/Python/comments/1hz9oaq/sunday_daily_thread_whats_everyone_working_on/,1736640032.0,3,"# Weekly Thread: What's Everyone Working On This Week? 🛠️
+
+Hello /r/Python! It's time to share what you've been working on! Whether it's a work-in-progress, a completed masterpiece, or just a rough idea, let us know what you're up to!
+
+## How it Works:
+
+1. **Show & Tell**: Share your current projects, completed works, or future ideas.
+2. **Discuss**: Get feedback, find collaborators, or just chat about your project.
+3. **Inspire**: Your project might inspire someone else, just as you might get inspired here.
+
+## Guidelines:
+
+* Feel free to include as many details as you'd like. Code snippets, screenshots, and links are all welcome.
+* Whether it's your job, your hobby, or your passion project, all Python-related work is welcome here.
+
+## Example Shares:
+
+1. **Machine Learning Model**: Working on a ML model to predict stock prices. Just cracked a 90% accuracy rate!
+2. **Web Scraping**: Built a script to scrape and analyze news articles. It's helped me understand media bias better.
+3. **Automation**: Automated my home lighting with Python and Raspberry Pi. My life has never been easier!
+
+Let's build and grow together! Share your journey and learn from others. Happy coding! 🌟",AutoModerator
+1hyivpf,Saturday Daily Thread: Resource Request and Sharing! Daily Thread,5,https://www.reddit.com/r/Python/comments/1hyivpf/saturday_daily_thread_resource_request_and/,1736553637.0,2,"# Weekly Thread: Resource Request and Sharing 📚
+
+Stumbled upon a useful Python resource? Or are you looking for a guide on a specific topic? Welcome to the Resource Request and Sharing thread!
+
+## How it Works:
+
+1. **Request**: Can't find a resource on a particular topic? Ask here!
+2. **Share**: Found something useful? Share it with the community.
+3. **Review**: Give or get opinions on Python resources you've used.
+
+## Guidelines:
+
+* Please include the type of resource (e.g., book, video, article) and the topic.
+* Always be respectful when reviewing someone else's shared resource.
+
+## Example Shares:
+
+1. **Book**: [""Fluent Python""](https://www.amazon.com/Fluent-Python-Concise-Effective-Programming/dp/1491946008) \- Great for understanding Pythonic idioms.
+2. **Video**: [Python Data Structures](https://www.youtube.com/watch?v=pkYVOmU3MgA) \- Excellent overview of Python's built-in data structures.
+3. **Article**: [Understanding Python Decorators](https://realpython.com/primer-on-python-decorators/) \- A deep dive into decorators.
+
+## Example Requests:
+
+1. **Looking for**: Video tutorials on web scraping with Python.
+2. **Need**: Book recommendations for Python machine learning.
+
+Share the knowledge, enrich the community. Happy learning! 🌟",AutoModerator
+1hyavui,Estimate Package Reliability Programmatically,4,https://www.reddit.com/r/Python/comments/1hyavui/estimate_package_reliability_programmatically/,1736532945.0,33,"I manage a large user base on a shared server. I’m having trouble efficiently observing the reliability of the packages users are downloading. I will typically just investigate the packages one by one, using a combination of GitHub stars or active issues. I really need a programmatic solution to observing some usage stats on these packages, for example getting their stars or pypi downloads via some dataset or some proxy.
+
+Does anyone have any experience managing user bases like this? This seems like more art than science, so curious to see opinions on this.",tylerriccio8
+1i0a0q7,BLIP CAM:Self Hosted Live Image Captioning with Real-Time Video Stream 🎥,6,https://www.reddit.com/r/Python/comments/1i0a0q7/blip_camself_hosted_live_image_captioning_with/,1736759224.0,0,"Hey everyone! I've developed a real-time image captioning system that uses your webcam to generate live descriptions of what it sees. It's powered by BLIP (Bootstrapping Language-Image Pre-training) model, and it overlays the captions right on your video feed in real-time.
+
+**What My Project Does:** This is a Python application that turns on your webcam and starts describing what it sees in real-time. It uses Salesforce's BLIP model to analyze each frame and generate natural language descriptions. The system shows you the caption, frame rate, and even GPU usage right on the screen. You can save frames with their captions, pause the description whenever you want, and it's all optimized to run smoothly on your computer.
+
+**Target Audience:** This project is perfect for:
+
+* Developers working on accessibility tools for visually impaired users
+* Anyone interested in computer vision and natural language processing
+* People building smart security systems or educational tools
+* Developers looking to add automated scene description to their applications
+
+**Technical Details:** The system uses a multi-threaded architecture to handle video streaming and caption generation separately, ensuring smooth performance. It supports GPU acceleration if you have an NVIDIA card, and you can easily configure things like resolution and caption update frequency. All the core dependencies are standard: OpenCV, PyTorch, Transformers, and Pillow.
+
+**Comparison:** While there are other image captioning systems out there, most of them work on static images. This project processes video in real-time, which means you get instant feedback about what's happening in front of your camera. The multi-threaded design means you get smooth video even while it's thinking about captions, and the performance metrics help you understand exactly how well it's running on your system.
+
+You can check out the project on GitHub: [https://github.com/zawawiAI/BLIP\_CAM](https://github.com/zawawiAI/BLIP_CAM)
+
+The installation is straightforward - just clone, install dependencies, and run. I've included clear documentation and configuration options in the repo.",Ill-Equivalent7859
+1i2ahv1,Robyn (Web Framework) is looking for PR reviews on Chinese translation,3,https://www.reddit.com/r/Python/comments/1i2ahv1/robyn_web_framework_is_looking_for_pr_reviews_on/,1736982271.0,2,"Hey Everyone 👋
+
+Robyn is now working on supporting docs in Chinese, in addition to English! 🎉  
+  
+But I don't know Chinese, so I'd love to get some cross-reviews on the translation to make sure everything is accurate and polished.
+
+For the unfamiliar, [Robyn](https://github.com/sansyrox/robyn) is a **Super Fast Async Python Web Framework with a Rust runtime**.
+
+You can find the PR here: [https://github.com/sparckles/Robyn/pull/1097](https://github.com/sparckles/Robyn/pull/1097)
+
+Would really appreciate some support here! Thank you so much in advance! 😊",stealthanthrax
+1i247ie,Theme or graphic library for ui,3,https://www.reddit.com/r/Python/comments/1i247ie/theme_or_graphic_library_for_ui/,1736965957.0,1,"Hi, i was searching for a python library or tkinter theme that was able to pull off the windows 11 theme with a bit of transparency, this are some screenshots of how i want it to look like:
+
+[https://imgur.com/a/o0hOZh0](https://imgur.com/a/o0hOZh0) \- [https://imgur.com/83TYPik](https://imgur.com/83TYPik) \- [https://imgur.com/R8eX0nK](https://imgur.com/R8eX0nK) \- [https://imgur.com/07XR3Ou](https://imgur.com/07XR3Ou) ",Theb1ffy_
+1hy37v2,Any notable moments while teaching Python?,3,https://www.reddit.com/r/Python/comments/1hy37v2/any_notable_moments_while_teaching_python/,1736511711.0,25,"From my experience, it seems that Python is growing in popularity as an introductory programming language for high school classes and university-level courses. With that in mind, does anyone have any memorable stories to share about teaching Python to someone else or a class of students? Any creative successes or epic failures? Even if you were just teaching/mentoring a single person, did you learn anything new or realize why Python was becoming more popular as an easy-to-learn language?",RoutineTension4496
+1hxr7g3,Friday Daily Thread: r/Python Meta and Free-Talk Fridays,3,https://www.reddit.com/r/Python/comments/1hxr7g3/friday_daily_thread_rpython_meta_and_freetalk/,1736467267.0,2,"# Weekly Thread: Meta Discussions and Free Talk Friday 🎙️
+
+Welcome to Free Talk Friday on /r/Python! This is the place to discuss the r/Python community (meta discussions), Python news, projects, or anything else Python-related!
+
+## How it Works:
+
+1. **Open Mic**: Share your thoughts, questions, or anything you'd like related to Python or the community.
+2. **Community Pulse**: Discuss what you feel is working well or what could be improved in the /r/python community.
+3. **News & Updates**: Keep up-to-date with the latest in Python and share any news you find interesting.
+
+## Guidelines:
+
+* All topics should be related to Python or the /r/python community.
+* Be respectful and follow Reddit's [Code of Conduct](https://www.redditinc.com/policies/content-policy).
+
+## Example Topics:
+
+1. **New Python Release**: What do you think about the new features in Python 3.11?
+2. **Community Events**: Any Python meetups or webinars coming up?
+3. **Learning Resources**: Found a great Python tutorial? Share it here!
+4. **Job Market**: How has Python impacted your career?
+5. **Hot Takes**: Got a controversial Python opinion? Let's hear it!
+6. **Community Ideas**: Something you'd like to see us do? tell us.
+
+Let's keep the conversation going. Happy discussing! 🌟",AutoModerator
+1i2botq,"Thursday Daily Thread: Python Careers, Courses, and Furthering Education!",2,https://www.reddit.com/r/Python/comments/1i2botq/thursday_daily_thread_python_careers_courses_and/,1736985629.0,0,"# Weekly Thread: Professional Use, Jobs, and Education 🏢
+
+Welcome to this week's discussion on Python in the professional world! This is your spot to talk about job hunting, career growth, and educational resources in Python. Please note, this thread is **not for recruitment**.
+
+---
+
+## How it Works:
+
+1. **Career Talk**: Discuss using Python in your job, or the job market for Python roles.
+2. **Education Q&A**: Ask or answer questions about Python courses, certifications, and educational resources.
+3. **Workplace Chat**: Share your experiences, challenges, or success stories about using Python professionally.
+
+---
+
+## Guidelines:
+
+- This thread is **not for recruitment**. For job postings, please see r/PythonJobs or the recruitment thread in the sidebar.
+- Keep discussions relevant to Python in the professional and educational context.
+  
+---
+
+## Example Topics:
+
+1. **Career Paths**: What kinds of roles are out there for Python developers?
+2. **Certifications**: Are Python certifications worth it?
+3. **Course Recommendations**: Any good advanced Python courses to recommend?
+4. **Workplace Tools**: What Python libraries are indispensable in your professional work?
+5. **Interview Tips**: What types of Python questions are commonly asked in interviews?
+
+---
+
+Let's help each other grow in our careers and education. Happy discussing! 🌟",AutoModerator
+1i234xc,"I've created RaptorSight, an open source port scanner ",2,https://www.reddit.com/r/Python/comments/1i234xc/ive_created_raptorsight_an_open_source_port/,1736963247.0,6,"I've created RaptorSight, it's not really a tool meant for production but a simple project of mine, put double lines under simple
+
+It's also 100% python
+
+**What my project does*
+
+It scans open ports on a web server, it supports threading, it also has service recognition, plus I'm planning to add service version detection in the future
+
+**Target audience**
+
+It's really just a project for people who want to understand how it works
+
+**Comparison**
+Ok that's a hard one, I believe my project wouldn't really stand a second next to nmap or the other big port scanners, LIKE C'MON I JUST LEARNT WHAT CLASSES ARE A FEW DAYS AGO
+
+
+I'm here looking for reviews, stars, maybe pull requests and just overall your opinion, thanks if you read all of this
+
+Link: https://github.com/RogueElectron/RaptorSight-Port-Scanner
+",Debia98
+1i1kdk3,Wednesday Daily Thread: Beginner questions,2,https://www.reddit.com/r/Python/comments/1i1kdk3/wednesday_daily_thread_beginner_questions/,1736899238.0,2,"# Weekly Thread: Beginner Questions 🐍
+
+Welcome to our Beginner Questions thread! Whether you're new to Python or just looking to clarify some basics, this is the thread for you.
+
+## How it Works:
+
+1. **Ask Anything**: Feel free to ask any Python-related question. There are no bad questions here!
+2. **Community Support**: Get answers and advice from the community.
+3. **Resource Sharing**: Discover tutorials, articles, and beginner-friendly resources.
+
+## Guidelines:
+
+* This thread is specifically for **beginner questions**. For more advanced queries, check out our [Advanced Questions Thread](#advanced-questions-thread-link).
+
+## Recommended Resources:
+
+* If you don't receive a response, consider exploring r/LearnPython or join the [Python Discord Server](https://discord.gg/python) for quicker assistance.
+
+## Example Questions:
+
+1. **What is the difference between a list and a tuple?**
+2. **How do I read a CSV file in Python?**
+3. **What are Python decorators and how do I use them?**
+4. **How do I install a Python package using pip?**
+5. **What is a virtual environment and why should I use one?**
+
+Let's help each other learn Python! 🌟",AutoModerator
