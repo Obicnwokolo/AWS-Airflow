@@ -39,6 +39,6 @@ if __name__ == "__main__":
         user_agent="obicool",
         subreddit_name="python",
         time_filter="week",
-        limit=50
+        limit=200
     )
-    df.to_csv(f"reddit_posts.csv_{file_postfix}", index=False)
+    df.to_csv(f"reddit_posts_{file_postfix}.csv", index=False)
