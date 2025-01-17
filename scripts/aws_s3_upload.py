@@ -1,34 +1,20 @@
 import pandas as pd
-file_postfix = datetime.now().strftime("%Y%m%d")
+from airflow.providers.amazon.aws.hooks.s3 import S3Hook
+from airflow.hooks.base import BaseHook
 
-def upload_data_s3(
-        df: pd.Dataframe,
-        bucket_name: str,
-        file_name: str,
-        aws_access_key: str,
-        aw_sectret_key: str
-):
-    try:
-        s3_path = f"s3://{bucket_name}/{file_name}"
+def upload_from_xcom_to_s3(**kwargs):
+    # Pull the DataFrame from XCom
+    ti = kwargs['ti']
+    df_json = ti.xcom_pull(task_ids='extract_reddit_data', key='reddit_df')
+    
+    # Convert JSON back to DataFrame
+    df = pd.read_json(df_json)
 
-        storege_options = {
-            "key": aws_access_key,
-            "secret": aw_sectret_key,
-        }
+    # Define S3 details
+    bucket_name = 'os3://bdus829/obinna/airflow/raw_data/'
+    s3_key = f"reddit_posts_{kwargs['execution_date'].strftime('%Y%m%d')}.csv"
 
-        df.to_csv(s3_path, index=False, storage=storege_options)
-        print(f"Dataframe successfully uploaded to '{s3_path}.")
-
-    except Exception as e:
-        print(f"Error uploading DataFrame to s3: {e}")
-
-if __name__ == "__main__":
-
-    data = {}
-
-
-    # AWS Credentials and s3 Details
-    aws_access_key=
-    aws_secret_key=
-    bucket_name= 'bdus829/obinna/airflow/raw_data/'
-    file_name= f'reddit_{file_postfix}'
+    # Convert the DataFrame to CSV and upload it to S3
+    s3_hook = S3Hook(aws_conn_id="aws_default")  # Use your Airflow AWS connection ID
+    s3_hook.load_string(df.to_csv(index=False), key=s3_key, bucket_name=bucket_name, replace=True)
+    print(f"Data successfully uploaded to {bucket_name}/{s3_key}")

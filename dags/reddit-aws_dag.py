@@ -46,7 +46,20 @@ run_upload_s3 = BashOperator(
     dag=dag,
 )
 
+run_task = """
+export PYSPARK_PYTHON=python3
+export PYSPARK_DRIVER_PYTHON=python3
+export HADOOP_CONF_DIR=/etc/hadoop/conf
+export YARN_CONF_DIR=/etc/hadoop/conf
+spark-submit --master yarn --jars /home/ec2-user/postgresql-42.5.3.jar /home/ec2-user/airflow/dags/AWS-Airflow/scripts/reddit3.py
+"""
+
+run_task2 = BashOperator(
+    task_id='run_upload_s3',
+    bash_command=run_task,
+    dag=dag,
+)
 
 # Task sequence: First set environment variables, then run SparkSubmitOperator
-run_extract_reddit >> run_upload_s3
+run_extract_reddit >> run_upload_s3 >> run_task2
 
